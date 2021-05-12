@@ -15,7 +15,7 @@ int fun(string s)
 
 int main()
 {
-    int t, a, b, n, sh = 0, an = 0;
+    long int t, a, b, n, sh = 0, an = 0;
     cin >> t;
     while (t--)
     {
