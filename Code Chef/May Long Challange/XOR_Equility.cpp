@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 
-long long int temp=0;
-
 /* Iterative Function to calculate (x^y)%p in O(log y) */
 long long int power(long long x, unsigned int y, int p)
 {
@@ -21,23 +19,37 @@ long long int power(long long x, unsigned int y, int p)
     y = y >> 1;
     x = (x * x) % p;
   }
-  temp=res;
   return res;
 }
 
+long long int power(long long int x, long long int y)
+{
+  long long int res = 1;
+
+  while (y)
+  {
+    if (y % 2 == 1)
+      res = (res * x);
+
+    y = y >> 1;
+
+    x = (x * x);
+  }
+  return res;
+}
 
 int main()
 {
-  long long int t, n, z = 100000007, res;
-
-  // cout<<z<<endl;
+  long long int x = 2;
+  long long int y, t;
+  long long int p = 1000000007;
   cin >> t;
   while (t--)
   {
-
-    cin >> n;
-    power(2, (n - 1), z);
-    cout<<temp<<endl;
+    cin >> y;
+    y = y - 1;
+    cout << power(x, y, p) << endl;
   }
+
   return 0;
 }
