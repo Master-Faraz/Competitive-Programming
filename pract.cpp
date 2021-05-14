@@ -56,14 +56,14 @@ int main()
         {
             if (a[0][0] == 'X')
                 X_win++;
-            else
+            else if(a[0][0] == 'O')
                 O_win++;
         }
         else if (((a[0][2] == a[1][1]) and (a[1][1] == a[2][0])))
         {
             if (a[1][1] == 'X')
                 X_win++;
-            else
+            else if(a[1][1] == 'O')
                 O_win++;
         }
 
@@ -73,22 +73,20 @@ int main()
             cout << 3 << endl;
         else if ((X_count == 1 and O_count == 0) and (underscore_count = 8))
             cout << 2 << endl;
-        else if ((X_count == 0 and O_count == 1) and (underscore_count = 8))
-            cout << 2 << endl;
 
-        else if ((X_count == 0 and O_count == 0) and (underscore_count = 9))
-            cout << 2 << endl;
+        // else if ((X_count == 0 and O_count == 0) and (underscore_count = 9))
+        //     cout << 2 << endl;
 
         else if ((X_count - O_count) > 1) //.         more X than O
             cout << 3 << endl;
 
-        else if (((X_count > O_count) and ((X_win == 1) and (O_win == 0)))) //.   last value put by X and it wins
+        else if (((X_count > O_count) and ((X_win == 1) and (O_win == 0)))) //.   X and wins
             cout << 1 << endl;
 
-        else if ((X_count == O_count) and ((X_win == 0) and (O_win == 1))) //.  last Value put by O and it wins
+        else if ((X_count == O_count) and ((X_win == 0) and (O_win == 1))) //.  O wins the match
             cout << 1 << endl;
 
-        else if (((X_win + O_win) == 0) and (underscore_count == 0)) //.     Draw Condition
+        else if (((X_win == 0) and (O_win == 0)) and (underscore_count == 0)) //.     Draw Condition
             cout << 1 << endl;
 
         else if ((((X_win == 2) and (underscore_count == 0)))) //.     Special case in which X wins by rows and digonal full
@@ -99,6 +97,8 @@ int main()
 
         else
             cout << 3 << endl;
+// cout << "\n\n X Count : " << X_count << " O count : " << O_count << " UnderScore count : " << underscore_count << endl;
+// cout << X_win << "\t" << O_win << endl;
     }
 
     return 0;
