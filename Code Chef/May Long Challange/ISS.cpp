@@ -5,7 +5,6 @@ using namespace std;
 int main()
 {
 
-  
   cin.tie(0);
   int N = 4e6 + 5;
   int phi[N], ans[N];
