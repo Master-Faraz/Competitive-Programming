@@ -49,7 +49,7 @@ int main()
 
 // // long long int gcd(long long int a, long long int b);
 // long long int power(long long int x, long long int y);
-// long long int gcd(long long int a, long long int b)
+// long long int gcd(long long int a, long long int b)    // Best method of GCD -->  GFG documrntation
 // {
 //     while (b)
 //         b ^= a ^= b ^= a %= b;
