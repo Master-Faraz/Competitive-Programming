@@ -12,13 +12,13 @@ int main()
 
         cin >> D >> d >> p >> q;
 
-        int n = D / d;
+        long long int n = D / d;
 
         total = ((D * p) + (d * (q * (((n - 1) * n) / 2))));
 
         if((D%d)!=0)
         {
-            int rem=(D%d);
+            long long int rem=(D%d);
 
             total+=(rem*(n*q));
         }
