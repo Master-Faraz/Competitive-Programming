@@ -16,6 +16,8 @@ int main()
 
         total = ((D * p) + (d * (q * (((n - 1) * n) / 2))));
 
+
+
         if((D%d)!=0)
         {
             long long int rem=(D%d);
