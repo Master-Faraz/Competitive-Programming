@@ -5,6 +5,8 @@ for i in range(t):
     co = 0
     n = 0
 
+    
+
     l = []
     for i in range(0, 3):
         tic = input()
